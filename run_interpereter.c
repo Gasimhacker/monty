@@ -17,6 +17,7 @@ op_func *get_op_func(char *op_code)
 		{"pop", pop},
 		{"swap", swap},
 		{"add", add},
+		{"nop", nop},
 		{"sub", sub},
 		{"div", _div},
 		{"mul", mul},

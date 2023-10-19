@@ -227,6 +227,14 @@ void swap(stack_t **stack, unsigned int line_number);
  */
 void add(stack_t **stack, unsigned int line_number);
 /**
+ * nop - Do nothing
+ * @stack: A pointer to the head of the stack
+ * @line_number: This member is used for printing error messages
+ *
+ * Return: void
+ */
+void nop(stack_t **stack, unsigned int line_number);
+/**
  * sub - Subtract the top two elements of the stack
  * @stack: A pointer to the head of the stack
  * @line_number: This member is used for printing error messages
