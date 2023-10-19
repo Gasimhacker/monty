@@ -27,6 +27,8 @@ op_func *get_op_func(char *op_code)
 		{"pstr", pstr},
 		{"rotl", rotl},
 		{"rotr", rotr},
+		{"stack", stack_mode},
+		{"queue", queue_mode},
 		{NULL, NULL}
 	};
 

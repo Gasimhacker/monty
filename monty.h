@@ -300,6 +300,22 @@ void rotl(stack_t **stack, unsigned int line_number);
  * Return: void
  */
 void rotr(stack_t **stack, unsigned int line_number);
+/**
+ * stack_mode - Change the mode to LIFO
+ * @stack: A pointer to the head of the stack
+ * @line_number: This member is used for printing error messages
+ *
+ * Return: void
+ */
+void stack_mode(stack_t **stack, unsigned int line_number);
+/**
+ * queue_mode - Change the mode to FIFO
+ * @stack: A pointer to the head of the stack
+ * @line_number: This member is used for printing error messages
+ *
+ * Return: void
+ */
+void queue_mode(stack_t **stack, unsigned int line_number);
 
 
 #endif /* MONTY_H */
