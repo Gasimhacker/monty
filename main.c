@@ -14,13 +14,22 @@ int main(int argc, char **argv)
 	FILE *script = NULL;
 
 	if (argc != 2)
-		return (argc_error());
+	{
+		argc_error();
+	}
+	else
+	{
+		script = fopen(argv[1], "r");
+		if (script == NULL)
+		{
+			cant_open(argv[1]);
+		}
+		else
+		{
+			run_interpreter(script);
+			fclose(script);
+		}
+	}
 
-	script = fopen(argv[1], "r");
-	if (script == NULL)
-		return (cant_open(argv[1]));
-
-	run_interpreter(script);
-	fclose(script);
 	return (*exit_status);
 }

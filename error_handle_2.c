@@ -5,10 +5,12 @@
  * @line_number: The number of the line in the file
  * @err_msg: This message will be printed to the stderr
  *
- * Return: Always EXIT_FAILURE
+ * Return: Void
  */
-int empty_stack(int line_number, char *err_msg)
+void empty_stack(int line_number, char *err_msg)
 {
+	int *exit_status = get_exit_status();
+
 	fprintf(stderr, "L%d: %s\n", line_number, err_msg);
-	return (EXIT_FAILURE);
+	*exit_status = EXIT_FAILURE;
 }

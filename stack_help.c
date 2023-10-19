@@ -14,7 +14,10 @@ int init_stack(stack_t **stack)
 	s = malloc(sizeof(stack_t));
 
 	if (s == NULL)
-		return (malloc_error());
+	{
+		malloc_error();
+		return (EXIT_FAILURE);
+	}
 
 	s->n = STACK;
 	s->next = NULL;

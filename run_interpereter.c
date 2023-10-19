@@ -15,6 +15,7 @@ op_func *get_op_func(char *op_code)
 		{"pall", pall},
 		{"pint", pint},
 		{"pop", pop},
+		{"swap", swap},
 		{NULL, NULL}
 	};
 
@@ -82,14 +83,14 @@ void run_interpreter(FILE *script)
 		if (op_tokens == NULL)
 		{
 			free_stack(stack);
-			*exit_status = malloc_error();
+			malloc_error();
 			break;
 		}
 
 		func = get_op_func(op_tokens[0]);
 		if (func == NULL)
 		{
-			*exit_status = op_not_found(op_tokens[0], line_num);
+			op_not_found(op_tokens[0], line_num);
 			clean(op_tokens);
 			break;
 		}

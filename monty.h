@@ -122,30 +122,30 @@ void free_stack(stack_t *stack);
 /**
  * malloc_error - Print an error message if we can't allocate memory
  *
- * Return: Always EXIT_FAILURE
+ * Return: void
  */
-int malloc_error(void);
+void malloc_error(void);
 /**
  * argc_error - Print an error message if the argc is not 1
  *
- * Return: Always EXIT_FAILURE
+ * Return: void
  */
-int argc_error(void);
+void argc_error(void);
 /**
  * cant_open - Print an error message if the file cannot be opened
  * @file: The file path
  *
- * Return: Always EXIT_FAILURE
+ * Return: Void
  */
-int cant_open(char *file);
+void cant_open(char *file);
 /**
  * op_not_found - Print an error message if the op_code is invalid
  * @op_code: The invalid code
  * @line_num: The line containing the invalid code
  *
- * Return: Always EXIT_FAILURE
+ * Return: Void
  */
-int op_not_found(char *op_code, int line_num);
+void op_not_found(char *op_code, int line_num);
 /**
  * no_number_found -  Print an error message if the argument
  *		      passed is not an integer or if there is no argument given
@@ -159,9 +159,9 @@ void no_number_found(int line_number);
  * @line_number: The number of the line in the file
  * @err_msg: This message will be printed to the stderr
  *
- * Return: Always EXIT_FAILURE
+ * Return: Void
  */
-int empty_stack(int line_number, char *err_msg);
+void empty_stack(int line_number, char *err_msg);
 
 /* "Monty functions" */
 /**
@@ -203,6 +203,14 @@ void pint(stack_t **stack, unsigned int line_number);
  * Return: void
  */
 void pop(stack_t **stack, unsigned int line_number);
+/**
+ * swap - Swap the top two elements of the stack
+ * @stack: A pointer to the head of the stack
+ * @line_number: This member is used for printing error messages
+ *
+ * Return: void
+ */
+void swap(stack_t **stack, unsigned int line_number);
 
 
 #endif /* MONTY_H */

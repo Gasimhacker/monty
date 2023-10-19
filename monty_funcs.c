@@ -76,10 +76,8 @@ void pall(stack_t **stack, __attribute__((unused))unsigned int line_number)
  */
 void pint(stack_t **stack, unsigned int line_number)
 {
-	int *exit_status = get_exit_status();
-
 	if ((*stack)->next == NULL)
-		*exit_status = empty_stack(line_number, "can't pint, stack empty");
+		empty_stack(line_number, "can't pint, stack empty");
 	else
 		printf("%d\n", (*stack)->next->n);
 
@@ -94,12 +92,11 @@ void pint(stack_t **stack, unsigned int line_number)
  */
 void pop(stack_t **stack, unsigned int line_number)
 {
-	int *exit_status = get_exit_status();
 	stack_t *tmp = (*stack)->next;
 
 	if (tmp == NULL)
 	{
-		*exit_status = empty_stack(line_number, "can't pop an empty stack");
+		empty_stack(line_number, "can't pop an empty stack");
 		return;
 	}
 	(*stack)->next = tmp->next;
@@ -108,3 +105,24 @@ void pop(stack_t **stack, unsigned int line_number)
 
 }
 
+/**
+ * swap - Swap the top two elements of the stack
+ * @stack: A pointer to the head of the stack
+ * @line_number: This member is used for printing error messages
+ *
+ * Return: void
+ */
+void swap(stack_t **stack, unsigned int line_number)
+{
+	stack_t *top = (*stack)->next;
+	int tmp;
+
+	if (top == NULL || top->next == NULL)
+	{
+		empty_stack(line_number, "can't swap, stack too short");
+		return;
+	}
+	tmp = top->n;
+	top->n = top->next->n;
+	top->next->n = tmp;
+}
