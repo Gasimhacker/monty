@@ -193,7 +193,7 @@ void push(stack_t **stack, unsigned int line_number);
  *
  * Return: void
  */
-void pall(stack_t **stack, __attribute__((unused))unsigned int line_number);
+void pall(stack_t **stack, unsigned int line_number);
 /**
  * pint - Print the elements at the top of the stack
  * @stack: A pointer to the head of the stack
@@ -284,6 +284,22 @@ void pchar(stack_t **stack, unsigned int line_number);
  * Return: void
  */
 void pstr(stack_t **stack, unsigned int line_number);
+/**
+ * rotl - Rotate the stack to the top
+ * @stack: A pointer to the head of the stack
+ * @line_number: This member is used for printing error messages
+ *
+ * Return: void
+ */
+void rotl(stack_t **stack, unsigned int line_number);
+/**
+ * rotr - Rotate the stack to the bottom
+ * @stack: A pointer to the head of the stack
+ * @line_number: This member is used for printing error messages
+ *
+ * Return: void
+ */
+void rotr(stack_t **stack, unsigned int line_number);
 
 
 #endif /* MONTY_H */
