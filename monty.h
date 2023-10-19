@@ -162,6 +162,13 @@ void no_number_found(int line_number);
  * Return: Void
  */
 void empty_stack(int line_number, char *err_msg);
+/**
+ * zero_division - Print an error message if there is a division by zero
+ * @line_number: The number of the line in the file
+ *
+ * Return: Void
+ */
+void zero_division(int line_number);
 
 /* "Monty functions" */
 /**
@@ -211,6 +218,48 @@ void pop(stack_t **stack, unsigned int line_number);
  * Return: void
  */
 void swap(stack_t **stack, unsigned int line_number);
+/**
+ * add - Add the top two elements of the stack
+ * @stack: A pointer to the head of the stack
+ * @line_number: This member is used for printing error messages
+ *
+ * Return: void
+ */
+void add(stack_t **stack, unsigned int line_number);
+/**
+ * sub - Subtract the top two elements of the stack
+ * @stack: A pointer to the head of the stack
+ * @line_number: This member is used for printing error messages
+ *
+ * Return: void
+ */
+void sub(stack_t **stack, unsigned int line_number);
+/**
+ * _div - Divide the the second top element of the
+ *	 stack by the top element of the stack
+ * @stack: A pointer to the head of the stack
+ * @line_number: This member is used for printing error messages
+ *
+ * Return: void
+ */
+void _div(stack_t **stack, unsigned int line_number);
+/**
+ * mul - Multiply the top two elements of the stack
+ * @stack: A pointer to the head of the stack
+ * @line_number: This member is used for printing error messages
+ *
+ * Return: void
+ */
+void mul(stack_t **stack, unsigned int line_number);
+/**
+ * mod - Compute the rest of the division of the second top element
+ *	 of the stack by the top element of the stack
+ * @stack: A pointer to the head of the stack
+ * @line_number: This member is used for printing error messages
+ *
+ * Return: void
+ */
+void mod(stack_t **stack, unsigned int line_number);
 
 
 #endif /* MONTY_H */

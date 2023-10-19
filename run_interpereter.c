@@ -16,6 +16,11 @@ op_func *get_op_func(char *op_code)
 		{"pint", pint},
 		{"pop", pop},
 		{"swap", swap},
+		{"add", add},
+		{"sub", sub},
+		{"div", _div},
+		{"mul", mul},
+		{"mod", mod},
 		{NULL, NULL}
 	};
 
