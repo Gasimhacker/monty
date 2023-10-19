@@ -24,6 +24,7 @@ op_func *get_op_func(char *op_code)
 		{"mul", mul},
 		{"mod", mod},
 		{"pchar", pchar},
+		{"pstr", pstr},
 		{NULL, NULL}
 	};
 

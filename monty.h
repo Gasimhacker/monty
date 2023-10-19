@@ -276,6 +276,14 @@ void mod(stack_t **stack, unsigned int line_number);
  * Return: void
  */
 void pchar(stack_t **stack, unsigned int line_number);
+/**
+ * pstr - Print the string starting at the top of the stack
+ * @stack: A pointer to the head of the stack
+ * @line_number: This member is used for printing error messages
+ *
+ * Return: void
+ */
+void pstr(stack_t **stack, unsigned int line_number);
 
 
 #endif /* MONTY_H */
