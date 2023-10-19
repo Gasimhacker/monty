@@ -268,6 +268,14 @@ void mul(stack_t **stack, unsigned int line_number);
  * Return: void
  */
 void mod(stack_t **stack, unsigned int line_number);
+/**
+ * pchar - Print the character at the top of the stack
+ * @stack: A pointer to the head of the stack
+ * @line_number: This member is used for printing error messages
+ *
+ * Return: void
+ */
+void pchar(stack_t **stack, unsigned int line_number);
 
 
 #endif /* MONTY_H */
