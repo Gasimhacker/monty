@@ -30,7 +30,7 @@ int argc_error(void)
  */
 int cant_open(char *file)
 {
-	fprintf(stderr, "Error: Can't open file <%s>\n", file);
+	fprintf(stderr, "Error: Can't open file %s\n", file);
 	return (EXIT_FAILURE);
 }
 
@@ -43,7 +43,7 @@ int cant_open(char *file)
  */
 int op_not_found(char *op_code, int line_num)
 {
-	fprintf(stderr, "L<%d>: unknown instruction <%s>\n", line_num, op_code);
+	fprintf(stderr, "L%d: unknown instruction %s\n", line_num, op_code);
 	return (EXIT_FAILURE);
 }
 
@@ -58,6 +58,6 @@ void no_number_found(int line_number)
 {
 	int *exit_status = get_exit_status();
 
-	fprintf(stderr, "L<%d>: usage: push integer\n", line_number);
+	fprintf(stderr, "L%d: usage: push integer\n", line_number);
 	*exit_status = EXIT_FAILURE;
 }
