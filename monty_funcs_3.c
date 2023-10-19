@@ -27,5 +27,4 @@ void pchar(stack_t **stack, unsigned int line_number)
 		empty_stack(line_number, "can't pchar, value out of range");
 	else
 		printf("%c\n", (*stack)->next->n);
-
 }

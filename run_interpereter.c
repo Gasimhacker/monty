@@ -18,6 +18,7 @@ op_func *get_op_func(char *op_code)
 		{"swap", swap},
 		{"add", add},
 		{"nop", nop},
+		{"#", nop},
 		{"sub", sub},
 		{"div", _div},
 		{"mul", mul},
@@ -84,7 +85,7 @@ void run_interpreter(FILE *script)
 	while ((getline(&line, &len, script) != -1))
 	{
 		line_num++;
-		if (is_empty(line, DELIMS) || line[0] == '#')
+		if (is_empty(line, DELIMS))
 			continue;
 		op_tokens = split_string(line, DELIMS);
 		if (op_tokens == NULL)
