@@ -155,12 +155,13 @@ int op_not_found(char *op_code, int line_num);
  */
 void no_number_found(int line_number);
 /**
- * cannot_pint - Print an error message if the stack is empty
+ * empty_stack - Print an error message if the stack is empty
  * @line_number: The number of the line in the file
+ * @err_msg: This message will be printed to the stderr
  *
  * Return: Always EXIT_FAILURE
  */
-int cannot_pint(int line_number);
+int empty_stack(int line_number, char *err_msg);
 
 /* "Monty functions" */
 /**
@@ -194,6 +195,14 @@ void pall(stack_t **stack, __attribute__((unused))unsigned int line_number);
  * Return: void
  */
 void pint(stack_t **stack, unsigned int line_number);
+/**
+ * pop - Remove the elements at the top of the stack
+ * @stack: A pointer to the head of the stack
+ * @line_number: This member is used for printing error messages
+ *
+ * Return: void
+ */
+void pop(stack_t **stack, unsigned int line_number);
 
 
 #endif /* MONTY_H */

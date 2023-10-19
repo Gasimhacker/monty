@@ -1,13 +1,14 @@
 #include "monty.h"
 
 /**
- * cannot_pint - Print an error message if the stack is empty
+ * empty_stack - Print an error message if the stack is empty
  * @line_number: The number of the line in the file
+ * @err_msg: This message will be printed to the stderr
  *
  * Return: Always EXIT_FAILURE
  */
-int cannot_pint(int line_number)
+int empty_stack(int line_number, char *err_msg)
 {
-	fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
+	fprintf(stderr, "L%d: %s\n", line_number, err_msg);
 	return (EXIT_FAILURE);
 }
