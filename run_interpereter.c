@@ -85,7 +85,7 @@ void run_interpreter(FILE *script)
 	while ((getline(&line, &len, script) != -1))
 	{
 		line_num++;
-		if (is_empty(line, DELIMS))
+		if (is_empty(line, DELIMS) || line[0] == '#')
 			continue;
 		op_tokens = split_string(line, DELIMS);
 		if (op_tokens == NULL)
