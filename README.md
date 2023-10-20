@@ -122,6 +122,7 @@ Command:
 Output:
 
 
-15
+15  
+
 10
 
