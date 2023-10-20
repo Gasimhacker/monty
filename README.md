@@ -52,7 +52,7 @@ The Monty interpreter supports the following opcodes:
 9. mul: Multiplies the top two elements of the stack.
 10. div: Divides the second top element by the top element.
 11. mod: Computes the modulo of the second top element by the top element.
-12. # <comment>: Represents a comment. The interpreter ignores the rest of the line.
+12. `#` <comment>: Represents a comment. The interpreter ignores the rest of the line.
 13. pchar: Prints the character at the top of the stack.
 14. pstr: Prints the string contained in the stack until a null terminator or non-ASCII character is encountered.
 15. rotl: Rotates the stack to the top.
@@ -69,10 +69,14 @@ Example 1: push and pall
 File: example.m
 
 
-`push 1`
-`push 2`
-`push 3`
-`pall`
+`push 1` 
+
+`push 2`  
+
+`push 3`  
+
+`pall`  
+
 
 
 Command:
@@ -83,9 +87,12 @@ Command:
 Output:
 
 
-3
-2
-1
+3 
+
+2  
+
+1  
+
 
 
 Example 2: add, pint, and pop
@@ -93,12 +100,18 @@ Example 2: add, pint, and pop
 File: arithmetic.m
 
 
-`push 10`
-`push 5`
-`add`
-`pint`
-`pop`
-`pint`
+`push 10`  
+
+`push 5`  
+
+`add`  
+
+`pint` 
+
+`pop`  
+
+`pint`  
+
 
 
 Command:
